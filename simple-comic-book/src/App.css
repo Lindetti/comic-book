@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+background-color: white;
+font-family: Comic Sans MS
+}
+
+
+/* Upper divs */
+.top {
+background-color:rgb(243, 243, 172);
+border-top:solid 1px #000;
+border-bottom:solid 1px #000;
+border-right:solid 1px #000;
+border-left:solid 1px #000;
+margin:0;
+position:absolute;
+top: 0;
+right: 0;
+padding: 3px 10px;
+text-align: center;
+}
+
+
+.top-left {
+  background-color:rgb(243, 243, 172);
+  border-top:solid 1px #000;
+  border-left:solid 1px #000;
+  border-bottom:solid 1px #000;
+  border-bottom-right-radius: 10px;
+  margin:0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding:10px 20px;
+  font-size: 1.2rem;
+}
+
+.top-left-mobile {
+  background-color:rgb(243, 243, 172);
+  border-top:solid 1px #000;
+  border-left:solid 1px #000;
+  border-bottom:solid 1px #000;
+  border-bottom-right-radius: 10px;
+  margin:0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding:10px 20px;
+}
+
+
+.bottom-right {
+  background-color:rgb(243, 243, 172);
+  border-right:solid 1px #000;
+  border-bottom:solid 1px #000;
+  margin:0;
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  padding:3px 10px;
+}
+
+.bottom-right-mobile {
+  background-color:rgb(243, 243, 172);
+  border-right:solid 1px #000;
+  border-bottom:solid 1px #000;
+  border-left:solid 1px #000;
+  border-top:solid 1px #000;
+  margin:0;
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  padding:10px 20px;
+  border-top-left-radius: 10px;
+  display: none;
+}
+
+.bottom-left {
+  background-color:rgb(243, 243, 172);
+  border-right:solid 1px #000;
+  border-bottom:solid 1px #000;
+  border-left:solid 1px #000;
+  border-top:solid 1px #000;
+  margin:0;
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  padding:10px 20px;
+  font-size: 1.2rem;
+}
+
+
+/* Content */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 100px 300px 350px 350px 100px;
+  grid-template-areas:
+    ".  h h h h h h . "
+    ".  pic1 pic1 pic1 box2 box2 box2 ."
+    ".  box1 box1 box1 box1 pic2 pic2 ."
+    ".  box3 box3 box4 box4 box5 box5 ."
+    ".  footer footer footer footer footer footer .";
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.header {
+  grid-area: h;
+  background-color: rgb(247, 247, 237);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  border-top: 5px solid rgb(247, 247, 237);
+  border-left: 30px solid rgb(247, 247, 237);
+  border-right: 30px solid rgb(247, 247, 237);
+  box-shadow: 0 -5px 5px -5px #333;
+}
+
+.header img {
+width: 100px;
+}
+
+.header p {
+font-size: 1.6rem;
+}
+
+
+.picture1 {
+  grid-area: pic1;
+  background-image: url("./Images/gothamCity.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 10px solid  rgb(247, 247, 237);
+  border-left: 30px solid  rgb(247, 247, 237);
+  position: relative;
+  overflow: hidden;
+}
+
+.picture2 {
+  grid-area: pic2;
+  background-image: url("./Images//batmanJokerBattle2.jpg");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 10px solid rgb(247, 247, 237);
+  border-left: 10px solid rgb(247, 247, 237);
+  border-right: 30px solid rgb(247, 247, 237);
+}
+
+.box1 {
+  grid-area: box1;
+  background-image: url("./Images/batmanJokerBattle1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 10px solid rgb(247, 247, 237);
+  border-left: 30px solid rgb(247, 247, 237);
+  position: relative;
+}
+
+
+.box2 {
+grid-area: box2;
+background-image: url("./Images/batmanJump2.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+border-bottom: 10px solid rgb(247, 247, 237);
+border-left: 10px solid rgb(247, 247, 237);
+border-right: 30px solid rgb(247, 247, 237);
+}
+
+
+.box3 {
+  grid-area: box3;
+  background-image: url("./Images//batmanDuck.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: center;
+  border-left: 30px solid rgb(247, 247, 237);
+  position: relative;
+}
+
+.speech-bubble {
+position: absolute;
+width: auto;
+padding: 10px;
+background-color: #eeecec;
+border-radius: 8px;
+left: 50%;
+transform: translateX(-50%);
+padding: 1rem;
+margin-top: 1rem;
+text-align: center;
+border: 1px solid rgb(0, 0, 0);
+}
+
+.speech-bubble:before {
+content: "";
+position: absolute;
+top: 100%;
+left: 25%;
+transform: translateX(-50%);
+border-width: 10px;
+border-style: solid;
+border-color: #f1f1f1 transparent transparent transparent;
+}
+
+
+.box4 {
+  grid-area: box4;
+  background-image: url("./Images//jokerEscape.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-left: 10px solid rgb(247, 247, 237);
+  border-right: 10px solid rgb(247, 247, 237);
+  position: relative;
+}
+
+
+.box5 {
+grid-area: box5;
+background-image: url("./Images//batmanEnd.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+border-right: 30px solid rgb(247, 247, 237);
+position: relative;
+}
+
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(247, 247, 237);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  border-bottom: 5px solid rgb(247, 247, 237);
+  border-left: 30px solid rgb(247, 247, 237);
+  border-right: 30px solid rgb(247, 247, 237);
+  box-shadow: 0 5px 5px -5px #333;
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 300px 300px 300px 300px 300px 300px 300px 100px;
+    grid-template-areas:
+      "h"
+      "pic1"
+      "box2"
+      "box1"
+      "pic2"
+      "box3"
+      "box4"
+      "box5"
+      "footer";
+      padding: 1rem;
+      gap: 1rem;
+      background-color: rgb(247, 247, 237);
+  }
+
+  .top-left-mobile {
+    display: none;
+  }
+
+  .bottom-right-mobile {
+    display: block;
+  }
+
+  .header img {
+    width: 80px;
+  }
+
+  .picture1 {
+    border-left: 15px solid  rgb(247, 247, 237);
+    border-right: 15px solid  rgb(247, 247, 237);
+    border-top: 10px solid  rgb(247, 247, 237); 
+  }
+
+  .picture1, .picture2, .box1, .box2, .box3, .box4, .box5 {
+   border: none;
+  }
+
+  .footer p {
+    font-size: 1.1rem;
+  }
+
+
+}
