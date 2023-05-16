@@ -1,1 +1,1 @@
-# comic-book
+# Simple CSS-grid layout
